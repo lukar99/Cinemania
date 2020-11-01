@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments :: head"></div>
+<body>
+<div th:replace="fragments :: navigation"></div>
+
+<div class="container" id="main">
+
+    <div class="row">
+
+        <div class="col-5">
+            <h2 class="h2  mt-4 mb-3" th:text="${cinema.name}"></h2>
+            <table class="table table-hover mb-0">
+
+                <tr>
+                    <th id="film">City:</th>
+                    <td id="film" th:text="${cinema.city}"></td>
+                </tr>
+                <tr>
+                    <th id="film" style="width: 100px;">Address:</th>
+                    <td id="film" th:text="${cinema.address}"></td>
+                </tr>
+                <tr>
+                    <th id="film">Phone:</th>
+                    <td id="film" th:text="${cinema.phone_number}"></td>
+                </tr>
+                <tr>
+                    <th id="film">Halls:</th>
+                    <td id="film" th:text="${cinema.halls.size()}"></td>
+                </tr>
+
+            </table>
+
+            <a th:href="@{/cinemas/{id}/halls (id=${cinema.id})}" class="btn btn-dark btn-lg shadow ml-3">See Halls</a>
+        </div>
+
+        <div class="col-7" style="height: 340px">
+            <img class="image-cinema-details" th:src="@{${cinema.image}}" alt="Cinema image" />
+        </div>
+    </div>
+
+
+        <th:block th:if="${noShowings}">
+            <h4 class="text-danger">No showings for selected movie and date.</h4>
+        </th:block>
+
+    </div>
+
+</div>
+<div th:replace="fragments :: footer"></div>
+
+<div th:replace="fragments :: scripts"></div>
+</body>
+</html>

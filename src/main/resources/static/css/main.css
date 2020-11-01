@@ -1,0 +1,189 @@
+
+body{
+  background-image: url("/img/background.jpg") !important;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+html,
+body,
+.view {
+  height: 100%;
+}
+
+label{
+  color: #ffffff;
+}
+
+.bg-primary{
+  background-color: #001a33 !important;
+}
+#watchbtn{
+  padding-bottom: 10px;
+}
+
+#main {
+  padding-top: 85px;
+  min-height: 92%;
+  overflow: auto;
+  padding-bottom: 180px;
+}
+
+
+
+
+h3, h5, h2{
+  color: #ffffff;
+  font-family: Impact, Charcoal, sans-serif;
+}
+#film{
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+
+.image-card-cinema {
+  display: inline-block;
+  height: 180px;
+  width: auto;
+}
+
+.image-cinema-details {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.img-responsive {
+
+  height: 180px;
+  width: auto;
+}
+
+.form-control {
+  color: #212529;
+}
+
+.carousel-item {
+  position: relative !important;
+  height:32rem !important;
+  background-color: #777;
+}
+.carousel-inner{
+  width:100%;
+}
+.carousel-inner img {
+  object-fit: cover;
+}
+.black-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.social {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 25px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-facebook {
+  background-color: #1877f2;
+}
+
+.social-facebook:hover {
+  background-color: #0c52ad;
+}
+
+.social-instagram {
+  background-color: #c32aa3;
+}
+
+.social-instagram:hover {
+  background-color: #8d1574;
+}
+
+.social-twitter {
+  background-color: #1da1f2;
+}
+
+.social-twitter:hover {
+  background-color: #a71d2a;
+}
+
+.footer {
+  position: relative;
+  margin-top: -142px;
+  clear: both;
+  padding-top: 20px;
+  background-color: #001a33;
+  font-size: 16px;
+  color: #cccccc;
+}
+#navbar{
+  margin-bottom: 45px;
+}
+.navbar-brand{
+  font-family: Impact, Charcoal, sans-serif;
+}
+.navbar:not(.top-nav-collapse) {
+  background-color: #001a33;
+}
+
+.nav-footer li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-footer a:hover {
+  color: #a71d2a;
+}
+
+.cont {
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  background-color: white;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 20px;
+}
+#carouselExampleCaptions{
+  margin-top: 56px;
+}
+.screen {
+  width: 100%;
+  border: 2px solid #18bc9c;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  padding: 10px 0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.cinemania{
+  font-family: Impact, Charcoal, sans-serif;
+  color: #a71d2a;
+  padding-top: 17px;
+
+}
+
+#fa{
+  color: #a71d2a;
+}
+
+

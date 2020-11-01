@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments :: head"></div>
+
+<body>
+<div th:replace="fragments :: navigation"></div>
+
+<div class="container" id="main">
+
+    <h3 class="my-3 justify-content-center" style="display: flex;">Manager Dashboard</h3>
+
+
+    <div class="col-12 justify-content-center" style="display: flex;">
+        <table class="table table-hover">
+            <tr>
+                <th id="film">Cinemas:</th>
+                <td id="film"><span th:text="${cinemas}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Halls:</th>
+                <td id="film"><span th:text="${halls}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Seats:</th>
+                <td id="film"><span th:text="${seats}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Movies:</th>
+                <td id="film"><span th:text="${movies}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Showings:</th>
+                <td id="film"><span th:text="${showings}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Sold tickets:</th>
+                <td id="film"><span th:text="${soldTickets}"></span></td>
+            </tr>
+            <tr>
+                <th id="film">Total income:</th>
+                <td id="film"><span th:text="${totalIncome}"></span>RSD</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+<div th:replace="fragments :: footer"></div>
+
+<div th:replace="fragments :: scripts"></div>
+</body>
+</html>

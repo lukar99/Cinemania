@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments :: head"></div>
+<body>
+<div th:replace="fragments :: navigation"></div>
+
+<div class="container" id="main" style="height:auto;
+    margin:0 auto; ">
+
+    <div class="d-flex justify-content-center my-3">
+        <h3>Reserve your ticket</h3>
+    </div>
+
+    <form th:action="@{/ticket/reserve}" method="POST" enctype="multipart/form-data" style="width:20%;
+    margin:0 auto;">
+        <h5>User</h5><input th:field="*{ticket.user}" name="user" id="user" th:value="*{ticket.user}">
+        <h5>Cinema</h5><input th:field="*{ticket.showing.hall.cinema.name}" name="cinema" id="cinema" th:value="*{ticket.showing.hall.cinema}">
+        <h5>Hall</h5><input th:field="*{ticket.showing.hall.name}" name="hall" id="hall" th:value="*{ticket.showing.hall}">
+        <h5>Movie</h5><input th:field="*{ticket.showing.movie.title}" name="movie" id="movie" th:value="*{ticket.showing.movie}">
+        <h5>Total Price</h5><input th:field="*{ticket.totalPrice}" name="totalPrice" id="totalPrice" th:value="*{ticket.totalPrice}">
+        <input th:field="*{ticket.payed}" name="payed" id="payed" type="hidden">
+        <input th:field="*{ticket.showing}" name="showing" id="showing" type="hidden">
+        <input th:field="*{ticket.user}" name="user" id="user" type="hidden">
+
+        <h5>Seat(row, column)</h5><select th:field="*{ticket.seat}"  name="seat" id="seat" required>
+            <th:block th:each="seat : ${seats}">
+                <option th:value="${seat.id}" th:text="${seat.row + ',' + seat.column}"></option>
+            </th:block>
+        </select>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger btn-lg px-5 shadow">Create</button>
+        </div>
+    </form>
+
+
+
+</div>
+
+
+
+<div th:replace="fragments :: footer"></div>
+
+<div th:replace="fragments :: scripts"></div>
